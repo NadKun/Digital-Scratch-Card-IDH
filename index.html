@@ -28,7 +28,7 @@
         .scratch-wrapper {
             position: relative;
             width: 320px;
-            height: 130px;
+            height: 190px;
             background: #fff;
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -41,7 +41,7 @@
         }
         .scratch-card {
             width: 100%;
-            height: 100px;
+            height: 140px;
             background: linear-gradient(45deg, #b0b0b0, #d3d3d3);
             cursor: pointer;
             position: absolute;
@@ -59,7 +59,7 @@
             z-index: 1;
             padding: 10px;
             text-align: center;
-            margin-top: 110px;
+            margin-top: 140px;
         }
         .reward-container {
             display: none;
@@ -100,24 +100,45 @@
     </style>
 </head>
 <body>
-    <h2>Complete all challenges to reveal a surprise!</h2>
+    <h2>Celebrate World Happiness Day with Us!</h2>
     <div class="scratch-container">
         <div class="scratch-wrapper">
             <canvas class="scratch-card"></canvas>
-            <div class="hidden-content">Give someone a compliment today</div>
+            <div class="hidden-content">Share a Smile: Find someone you haven't spoken to today and give them a big smile.</div>
         </div>
         <div class="scratch-wrapper">
             <canvas class="scratch-card"></canvas>
-            <div class="hidden-content">Take a 5-minute stretch</div>
+            <div class="hidden-content">Desk Stretch: Stand up and do a 30-second stretch. Reach for the sky and then touch your toes.</div>
         </div>
         <div class="scratch-wrapper">
             <canvas class="scratch-card"></canvas>
-            <div class="hidden-content">Write 3 things you are grateful for</div>
+            <div class="hidden-content">Mindful Moment: Close your eyes and take three deep breaths, focusing only on your breathing.</div>
         </div>
         <div class="scratch-wrapper">
             <canvas class="scratch-card"></canvas>
-            <div class="hidden-content">Take 2 minutes to breathe deeply and reset</div>
+            <div class="hidden-content">Positive Post-it: Write a compliment, joke, or show your gratitude on a sticky note and stick it on a colleague's desk.</div>
         </div>
+        <div class="scratch-wrapper">
+            <canvas class="scratch-card"></canvas>
+            <div class="hidden-content">Desk Declutter: Spend one minute tidying your workspace. A clean space can lift your mood!</div>
+        </div>
+        <div class="scratch-wrapper">
+            <canvas class="scratch-card"></canvas>
+            <div class="hidden-content">Gratitude List: Quickly jot down three things you're grateful for today.</div>
+        </div>
+        <div class="scratch-wrapper">
+            <canvas class="scratch-card"></canvas>
+            <div class="hidden-content">Quick Chat: Start a one-minute conversation with a coworker about anything other than work.</div>
+        </div>
+        <div class="scratch-wrapper">
+            <canvas class="scratch-card"></canvas>
+            <div class="hidden-content">Compliment Wave: Pay a compliment to someone, and ask them to compliment another person in the office.</div>
+        </div>
+    </div>
+        </div>
+        
+        
+        
     </div>
     <div class="reward-container" id="reward">
         <p class="reward-text">"The power of finding beauty in the humblest things makes home happy and life lovely."<br>- Louisa May Alcott</p>
@@ -173,7 +194,7 @@
                 if (clearedPixels > pixels.length * 0.6 / 4) {
                     canvas.style.display = "none";
                     completedScratchCards++;
-                    if (completedScratchCards === 4) {
+                    if (completedScratchCards === 8) {
                         document.getElementById("reward").classList.add("show");
                         document.getElementById("reward").style.display = "block";
                     }
